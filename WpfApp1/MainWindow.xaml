@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="#006064"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="MainWindow" Height="350" Width="525">
+    <materialDesign:DialogHost>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <materialDesign:Card Grid.Column="0" Grid.Row="0" Margin="16" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="16">
+            <StackPanel>
+                <TextBlock Margin="4">Hello World</TextBlock>
+                <Button Margin="4">OPEN DIALOG</Button>
+            </StackPanel>
+        </materialDesign:Card>
+        <GroupBox Grid.Column="1" Grid.Row="0" Margin="16" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="16">
+            <TextBlock>Hello World</TextBlock>
+        </GroupBox>
+        
+            
+        <materialDesign:ColorZone Mode="Accent" Padding="16" Grid.Column="0" Grid.Row="1" Margin="32">
+            <TextBlock>FOO</TextBlock>
+        </materialDesign:ColorZone>
+            
+        <materialDesign:Card Grid.Column="1" Grid.Row="1" Margin="16" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <DockPanel>
+                <materialDesign:ColorZone Mode="Accent" Padding="16">
+                    <TextBlock>BAR</TextBlock>
+                </materialDesign:ColorZone>
+            </DockPanel>
+        </materialDesign:Card>
+    </Grid>
+    </materialDesign:DialogHost>
+</Window>
